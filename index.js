@@ -1,28 +1,21 @@
+ //function start() {
+ //   console.log ("começou")
 
-let meta = {
-    value: 'ler um livro por mês',
-    checked: true,
+//} 
+
+//A function acimao também pode ser criada, atribuindo uma constante e uma função arrow
+
+const start = () => {
+    let count = 0
+    while (count <= 10){
+        console.log (count)
+        count = count + 1
+    }
+    
 }
 
-let metas = [
-    meta,
-    {
-        value: "caminhar 20 minutos todos os dias",
-        checked: false
-    }
-]
 
-console.log(metas[1].value)
-
-console.log(meta.checked)
-
-
-
-// function // arrow function
-//const criarMeta = () => {}
-
-// named function
-//function criarMeta() {}
+start()
 
 
 
