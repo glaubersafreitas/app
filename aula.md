@@ -23,6 +23,17 @@
 
 Variáveis globais e locais
 Constantes
+
+Ex:
+
+// Hello World //
+const mensagem = "Olá eu!"
+{
+    const mensagem = "Olá, Mundo!"
+    console.log(mensagem);
+}
+
+console.log(mensagem);
 ## Tipos de Dados
 
 String = textos "" '' ``
@@ -93,5 +104,25 @@ start ()
 ## Condicionais
 
 - Switch
+
+const start = () => {
+    while(true){
+        let opcao = "sair"
+        switch(opcao) {
+            case "cadastrar":
+                console.log ("Vamos cadastrar")
+                break
+            case "listar":
+                console.log ("Vamos Listar!")
+                break
+            case "sair":
+                return
+        }
+    }
+--------------------------------------------------
+
+npm - node package manager
+
+
 
 
