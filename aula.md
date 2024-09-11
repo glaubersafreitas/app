@@ -119,9 +119,26 @@ const start = () => {
                 return
         }
     }
---------------------------------------------------
 
+    --------------------------------------------------
+
+## Importação de módulos em Node.js
 npm - node package manager
+
+- Importação de Módulos (require, CommonJS)
+- Biblioteca "inquirer" para criar prompts interativos
+
+## Programação Assíncrona e Promises
+
+- uso de funções assíncronas (async/await)
+
+--- Await - para aguardar que o usuário selecione algo
+    --- Sempre antes de um await, a função deve possuir um assync
+
+
+
+
+
 
 
 
