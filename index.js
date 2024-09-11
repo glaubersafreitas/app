@@ -1,18 +1,19 @@
- //function start() {
- //   console.log ("começou")
-
-//} 
-
-//A function acimao também pode ser criada, atribuindo uma constante e uma função arrow
-
 const start = () => {
-    let count = 0
-    while (count <= 10){
-        console.log (count)
-        count = count + 1
+    while(true){
+        let opcao = "sair"
+        switch(opcao) {
+            case "cadastrar":
+                console.log ("Vamos cadastrar")
+                break
+            case "listar":
+                console.log ("Vamos Listar!")
+                break
+            case "sair":
+                return
+        }
     }
-    
 }
+
 
 
 start()

@@ -58,3 +58,40 @@ log: (info) => {
 ## Operadores
 = Operador de Atribuição de Valor
 + Operador de Concatenação
+
+## Functions
+- Criar, passar argumento
+- executar
+- arrow function
+
+const start = () => {
+    let count = 0
+}
+
+- named function
+
+function start() {
+    console.log ("começou")
+}
+## Estrutura de repetição
+
+- While
+
+Exemplo
+const start = () => {
+    let count = 0
+    while (count <= 10){
+        console.log (count)
+        count = count + 1
+    }
+    
+}
+
+start ()
+
+----------------------------------------------------
+## Condicionais
+
+- Switch
+
+
