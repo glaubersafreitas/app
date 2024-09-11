@@ -27,8 +27,19 @@ Constantes
 
 String = textos "" '' ``
 Number = Números 2 1.4
-Função
+Função - geralmente está fora do objeto, enquanto o método está dentro
 Bolean = verdadeiro ou falso
+
+### Arrays:
+
+Uma lista que contem qualquer tipo de dados
+
+### Objetos
+
+Atributos e métodos
+Criação e Manipulação de Objetos
+Acesso à propriedades de objetos
 
 ## Operadores
 = Operador de Atribuição de Valor
++ Operador de Concatenação
