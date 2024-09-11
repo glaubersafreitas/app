@@ -11,7 +11,10 @@ let metas = [
         checked: false
     }
 ]
+
 console.log(metas[1].value)
+
+console.log(meta.checked)
 
 
 
