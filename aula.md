@@ -28,7 +28,7 @@ Constantes
 String = textos "" '' ``
 Number = Números 2 1.4
 Função - geralmente está fora do objeto, enquanto o método está dentro
-Bolean = verdadeiro ou falso
+Bolean = true ou false
 
 ### Arrays:
 
@@ -39,6 +39,21 @@ Uma lista que contem qualquer tipo de dados
 Atributos e métodos
 Criação e Manipulação de Objetos
 Acesso à propriedades de objetos
+
+let metas = ["Glauber", "Alô"]
+
+console.log (metas[1] + ", " + metas[0] + "!")
+
+log: (info) => {
+        console.log(info)
+    }
+
+    //meta.value = "não é mais ler um livro"
+
+//meta.log(meta.value)
+// arrays [ ] , objetos { }
+
+
 
 ## Operadores
 = Operador de Atribuição de Valor
