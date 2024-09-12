@@ -67,8 +67,10 @@ log: (info) => {
 
 
 ## Operadores
-= Operador de Atribuição de Valor
-+ Operador de Concatenação
+Operador de Atribuição de Valor =
+Operador de Concatenação +
+Operador de Comparação == != <= >= < >
+
 
 ## Functions
 - Criar, passar argumento
@@ -121,6 +123,8 @@ const start = () => {
     }
 
     --------------------------------------------------
+
+    if/else
 
 ## Importação de módulos em Node.js
 npm - node package manager

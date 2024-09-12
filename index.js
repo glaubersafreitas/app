@@ -1,34 +1,84 @@
-const { select} = require ('@inquirer/prompts')
+const { select, input, checkbox } = require ('@inquirer/prompts')
 
-const start = async () => {
+let meta = {
+    value: 'Tomar 3L de água por dia',
+    checked: false,
+}
 
-    while(true){
-        
-        const opcao = await select({
-            message: "Menu >",
-            choices: [
-                {
-                    name: "Cadastrar Meta",
-                    value: "cadastrar"
-                },
-                {
-                    name: "Listar Metas",
-                    vale: "listar"
-                },
-                {
-                    name: "Sair",
-                    value: "sair"
-                }
+let metas = [ meta ]
 
-            ] 
+const cadastrarMeta = async () => {
+    const meta = await input({ message: "Digite a Meta:"})
+
+    if(meta.length == 0) {
+        console.log('A meta não pode ser vazia')
+        return
+    }
+
+    metas.push(
+        { value: meta, checked: false }
+    )
+}  
+
+const listarMetas = async () => {
+    const respostas = await checkbox ({
+        message: "Use as setas para mudar de meta, espaço para marcar ou desmarcar e o Enter para finalizar essa etapa",
+        choices: [...metas], /// [...metas] é igual {meta 01 + meta 02 ...}
+        instructions: false,
+    })
+
+    metas.forEach((m) => {
+        m.checked = false
+    })
+
+    
+
+    if(respostas.length == 0) {
+        console.log("Nenhuma meta selecionada")
+        return
+    }
+
+    respostas.forEach((resposta) => {
+        const meta = metas.find((m) => {
+            return m.value == resposta
         })
 
+        meta.checked = true
+    })
+
+    console.log('Meta(s) marcada(s) Concluída(s)')
+}
+
+
+const start = async () => {
+    while(true){
+        
+        const opcao = await select({               
+            message: "Menu >",
+            choices: [
+            {
+                name: "Cadastrar Meta",
+                value: "cadastrar"
+            },
+            {
+                name: "Listar Metas",
+                value: "listar"
+            },
+            {
+                name: "Sair",
+                value: "sair"
+            }
+
+        ] 
+    })
+       
         switch(opcao) {
             case "cadastrar":
-                console.log ("Vamos cadastrar")
+                await cadastrarMeta()
+                console.log(metas)
                 break
             case "listar":
-                console.log ("Vamos Listar!")
+                await listarMetas()
                 break
             case "sair":
                 console.log("Até a próxima!")
@@ -37,8 +87,4 @@ const start = async () => {
     }
 }
 
-
-start()
-
-
-
+start();
