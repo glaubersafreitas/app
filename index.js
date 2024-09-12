@@ -31,8 +31,7 @@ const listarMetas = async () => {
         m.checked = false
     })
 
-    
-
+  
     if(respostas.length == 0) {
         console.log("Nenhuma meta selecionada")
         return
