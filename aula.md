@@ -43,8 +43,8 @@ Bolean = true ou false
 
 ### Arrays:
 
-Uma lista que contem qualquer tipo de dados
-
+[x] Uma lista que contem qualquer tipo de dados
+[x] Métodos de Array push, (find, forEach, filter} HOF (Higher Order Function)
 ### Objetos
 
 Atributos e métodos
@@ -70,6 +70,7 @@ log: (info) => {
 Operador de Atribuição de Valor =
 Operador de Concatenação +
 Operador de Comparação == != <= >= < >
+Spread Operator [...]
 
 
 ## Functions
