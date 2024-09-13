@@ -44,7 +44,8 @@ Bolean = true ou false
 ### Arrays:
 
 [x] Uma lista que contem qualquer tipo de dados
-[x] Métodos de Array push, (find, forEach, filter} HOF (Higher Order Function)
+[x] Métodos de Array push, (map, find, forEach, filter} HOF (Higher Order Function)
+
 ### Objetos
 
 Atributos e métodos
@@ -128,10 +129,18 @@ const start = () => {
     if/else
 
 ## Importação de módulos em Node.js
-npm - node package manager
+
+- Comando para instalação de módulos: npm - node package manager
 
 - Importação de Módulos (require, CommonJS)
 - Biblioteca "inquirer" para criar prompts interativos
+- FS (File System)
+
+## JSON
+- Java Script Object Notation (.json)
+    - JSON.parse(): transforma de JSON para JS
+    - JSON.stringfy(): transforma de JS para JSON
+
 
 ## Programação Assíncrona e Promises
 
