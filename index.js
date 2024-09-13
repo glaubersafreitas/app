@@ -23,7 +23,7 @@ const cadastrarMeta = async () => {
 const listarMetas = async () => {
     const respostas = await checkbox ({
         message: "Use as setas para mudar de meta, espaço para marcar ou desmarcar e o Enter para finalizar essa etapa",
-        choices: [...metas], /// [...metas] é igual {meta 01 + meta 02 ...}
+        choices: [...metas], 
         instructions: false,
     })
 
@@ -58,7 +58,7 @@ const metasRealizadas = async () => {
     }
 
     await select({
-        message: "Metas Realizadas " + realizadas.length,
+        message: "Metas Realizadas: " + realizadas.length,
         choices: [...realizadas]
     })
     
@@ -75,9 +75,38 @@ const metasAbertas = async () => {
     }
 
     await select ({
-        message: "Metas Abertas " + abertas.length,
+        message: "Metas Abertas: " + abertas.length,
         choices: [...abertas]
     })
+}
+
+const deletarMetas = async () => {
+    const metasDesmarcadas = metas.map((meta) => {
+        return { value: meta.value, checked: false }
+    })
+
+
+    const intensADeletar = await checkbox ({
+        message: "Selecione um item para deletar",
+        choices: [...metasDesmarcadas], 
+        instructions: false,
+    })
+
+    if(intensADeletar.length == 0) {
+        console.log("Nenhum item para deletar")
+        return
+    }
+        intensADeletar.forEach((item) => {
+            metas = metas.filter((meta) => {
+                return meta.value != item
+        })
+
+        console.log("Meta(s) Deletada(s) com sucesso!")
+
+    })
+
+    console.log(intensADeletar)
+
 }
 
 const start = async () => {
@@ -103,6 +132,10 @@ const start = async () => {
                 value: "abertas"
             },
             {
+                name: "Deletar Metas",
+                value: "deletar"
+            },
+            {
                 name: "Sair",
                 value: "sair"
             }
@@ -123,6 +156,9 @@ const start = async () => {
                 break
             case "abertas":
                 await metasAbertas()
+                break
+            case "deletar":
+                await deletarMetas()
                 break
             case "sair":
                 console.log("Até a próxima!")

@@ -70,7 +70,7 @@ log: (info) => {
 Operador de Atribuição de Valor =
 Operador de Concatenação +
 Operador de Comparação == != <= >= < >
-Spread Operator [...]
+Spread Operator [...] /// [...metas] é igual {meta 01 + meta 02 ...}
 
 
 ## Functions
